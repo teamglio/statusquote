@@ -1,1 +1,1 @@
-web: ruby quote.rb -e "production" -p $PORT
+web: ruby app.rb -e "production" -p $PORT

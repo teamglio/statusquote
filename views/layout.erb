@@ -1,7 +1,7 @@
 <html>
 <body>
 	<div>
-		<mxit:advert auid="396525"/>
+		<mxit:advert auid=<%= ENV['MXIT_APP_AUID1'] %> />
 	</div>
 	<br />
 	<div>
@@ -12,17 +12,12 @@
 	<div>
 		------
 	</div>
+		<div>
+			<a href="mxit://[mxit_recommend]/Recommend?service_name=<%= ENV['MXIT_APP_NAME'] %>" type="mxit/service-navigation">Please share with your friends</a> | More Mxit: <%= @mixup_ad %>
+		</div>
 	<br />
 	<div>
-		<a href='mxit://[communityportal]/RecommendPage?ItemId=9766793' type="mxit/service-navigation">Click to share this app with friends! :-)</a>
-	</div>
-	<br />			
-	<div>
-		More Mxit: Try <a href="mxit://[communityportal:Refresh]/ReferralPage?ItemId=10742327" type="mxit/service-navigation">PhotoForge</a>, a brand new app that allows you to make your photos awesome by applying a wide variety of filters to them! | <%= @mixup_ad %>
-	</div>
-	<br />
-	<div>
-		<mxit:advert auid="401694"/>
+		<mxit:advert auid=<%= ENV['MXIT_APP_AUID2'] %> />
 	</div>	
 </body>
 </html>
