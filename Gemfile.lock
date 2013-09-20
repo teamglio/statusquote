@@ -11,6 +11,7 @@ GEM
       typhoeus (>= 0.6.1)
     json (1.8.0)
     mime-types (1.21)
+    nestful (1.0.5)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
@@ -33,6 +34,7 @@ PLATFORMS
 DEPENDENCIES
   dotenv
   firebase
+  nestful
   rest-client
   shotgun
   sinatra
