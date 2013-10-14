@@ -16,11 +16,11 @@ get '/' do
 	@mixup_ad = RestClient.get "http://serve.mixup.hapnic.com/#{ENV['MXIT_APP_NAME']}"
 	begin
 		@quote = RestClient.get 'http://www.iheartquotes.com/api/v1/random?source=oneliners'
+		StatHat::API.ez_post_count('statusquote - quotes requested', 'emile@silvis.co.za', 1)	
+		erb :quote		
 	rescue
 		erb "Status Quote: The server is a bit busy, try again in a few seconds :)"
 	end
-	StatHat::API.ez_post_count('statusquote - quotes requested', 'emile@silvis.co.za', 1)	
-	erb :quote
 end
 
 helpers do
