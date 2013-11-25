@@ -15,7 +15,7 @@ get '/' do
 	create_user unless get_user	
 	@mixup_ad = RestClient.get "http://serve.mixup.hapnic.com/#{ENV['MXIT_APP_NAME']}"
 	begin
-		@quote = RestClient.get 'http://www.iheartquotes.com/api/v1/random?source=oneliners'
+		@quote = RestClient.get 'http://www.iheartquotes.com/api/v1/random?source=oneliners&show_permalink=false&show_source=false'
 		StatHat::API.ez_post_count('statusquote - quotes requested', 'emile@silvis.co.za', 1)	
 		erb :quote		
 	rescue
